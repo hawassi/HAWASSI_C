@@ -1,0 +1,36 @@
+HAWASSI v240719 simulation has been run on Tue Sep 17 14:20:03 2024
+
+File input: ./1dFBr005Bor//input.txt 
+MODEL DESCRIPTION:
+Dynamic Model 		: HS2
+Dispersion Model 	: exact
+Breaking 		: yes
+	 Initiation 	: 0.80
+	 Termination 	: 0.20 0.50
+Bottom friction 	: no
+Kinematics 		: no
+
+INFLUX DESCRIPTION :
+Signal type 		: zero
+
+INITIAL WAVE CONDITIONS : 
+Initial condition : user_defined
+
+NUMERICAL SETTINGS : 
+Spatial interval: (-215.00,215.00)[m]
+Damping zone 	: 30.00[m] and 30.00[m]
+Number of Nodes : 4096
+Grid size (dx) 	: 0.11[m]
+Cutfrac k 	: 6
+Time interval 	: (0.00,120.00)[s]
+Time step (dt) 	: 0.02[s]
+Bathymetry 	: flat
+	 Depth 	: 1.00[m]
+
+
+OUTPUT SETTING: 
+No of Partition : 1
+
+After simulation:
+Relative time consuming: 1.09714
+Data saved in the folder: ./1dFBr005Bor/output/

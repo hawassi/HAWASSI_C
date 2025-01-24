@@ -1,0 +1,54 @@
+&INFLUX_SIGNAL
+wavename = harmonic		
+initial  = zero
+
+&IF wavename jonswap
+T		= 0
+Tend	 	= 600
+dt 		= 0.1
+Tp 		= 2
+Hs		= 0.1
+#gamma 	 	= 1
+
+&SPATIAL
+Xstart		= -100
+Xend		= 250
+Xinflux		= 0
+dx		= 0.1709819247679531
+Damp 		= 80 80
+bathymetry	= flat
+depth 		= 5		
+adjcoef		= 0.1
+
+&EVOL_MODEL
+dynamics	= HS1
+breaking	= no
+friction 	= no		
+influxing 	= Area
+propagation 	= Uni+
+kinematic 	= no
+ngauge 		= 1
+npartition 	= 1
+
+&IF BREAKING
+initiation 	= 1
+termination = 0.2 0.5
+
+&IF KINEMATIC
+xstart		= 40
+xend		= 60
+nsurf 		= 50
+ndeep 		= 40
+
+&MORE OPTIONS FOR EXPERT ONLY
+cutfrac		  = 2
+mid_depth_ref = default
+min_zsurf	  = -0.05
+max_zsurf 	  = 0.06
+ramp_influx 	= yes 4
+wall 		= yes
+walltype 	= 1 150 1
+
+&INPUT COUPLING MODULE
+coupling 	= no ../foc/output
+overlay 	= 30 40

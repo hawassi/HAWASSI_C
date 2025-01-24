@@ -1,0 +1,44 @@
+HAWASSI v240719 simulation has been run on Tue Sep 17 15:07:11 2024
+
+File input: ./1dB001IrSlope//input.txt 
+MODEL DESCRIPTION:
+Dynamic Model 		: HS2
+Dispersion Model 	: exact
+Breaking 		: no
+Bottom friction 	: no
+Kinematics 		: no
+
+INFLUX DESCRIPTION :
+Signal type 		: user_defined
+Derived info:
+	 Peak frequency (nu) 	: 3.69[rad/s]
+	 Peak wave-number (kp) 	: 1.77
+	 Peak wave-length 	: 3.55[m]
+	 Steepness (kp*(Hs./2)) : 0.06
+
+INITIAL WAVE CONDITIONS : 
+Initial condition : zero
+
+NUMERICAL SETTINGS : 
+Spatial interval: (-160.00,15.00)[m]
+Damping zone 	: 20.00[m] and 20.00[m]
+Number of Nodes : 2048
+Grid size (dx) 	: 0.09[m]
+Cutfrac k 	: 4
+Time interval 	: (0.00,1839.36)[s]
+Time step (dt) 	: 0.02[s]
+Bathymetry 	: user_defined
+The bathymetry data is from ./1dB001IrSlope/output//bath.dat
+
+INFLUXING : 
+Generation method : Area
+Direction 	: Uni+
+Influx position : -134.27[m]
+Nonlinear adjustment: 5*lambda_peak
+
+OUTPUT SETTING: 
+No of Partition : 1
+
+After simulation:
+Relative time consuming: 0.366785
+Data saved in the folder: ./1dB001IrSlope/output/

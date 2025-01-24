@@ -1,0 +1,5 @@
+for nc in {1,2,4,6,8,12,16}; do
+./Hawassi ./test/ out-par${nc} ${nc};
+done
+
+

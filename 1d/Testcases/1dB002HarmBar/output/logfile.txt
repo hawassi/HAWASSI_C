@@ -1,0 +1,44 @@
+HAWASSI v240719 simulation has been run on Tue Sep 17 15:14:23 2024
+
+File input: ./1dB002HarmBar//input.txt 
+MODEL DESCRIPTION:
+Dynamic Model 		: HS2
+Dispersion Model 	: exact
+Breaking 		: no
+Bottom friction 	: no
+Kinematics 		: no
+
+INFLUX DESCRIPTION :
+Signal type 		: user_defined
+Derived info:
+	 Peak frequency (nu) 	: 3.10[rad/s]
+	 Peak wave-number (kp) 	: 1.68
+	 Peak wave-length 	: 3.75[m]
+	 Steepness (kp*(Hs./2)) : 0.02
+
+INITIAL WAVE CONDITIONS : 
+Initial condition : zero
+
+NUMERICAL SETTINGS : 
+Spatial interval: (-20.00,50.00)[m]
+Damping zone 	: 20.00[m] and 20.00[m]
+Number of Nodes : 2048
+Grid size (dx) 	: 0.03[m]
+Cutfrac k 	: 4
+Time interval 	: (0.00,196.52)[s]
+Time step (dt) 	: 0.04[s]
+Bathymetry 	: user_defined
+The bathymetry data is from ./1dB002HarmBar/output//bath.dat
+
+INFLUXING : 
+Generation method : Area
+Direction 	: Uni+
+Influx position : 5.72[m]
+Nonlinear adjustment: 0.3*lambda_peak
+
+OUTPUT SETTING: 
+No of Partition : 1
+
+After simulation:
+Relative time consuming: 0.442403
+Data saved in the folder: ./1dB002HarmBar/output/

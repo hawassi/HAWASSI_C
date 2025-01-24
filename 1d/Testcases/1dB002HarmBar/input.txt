@@ -1,0 +1,54 @@
+&INFLUX_SIGNAL
+wavename = user_defined		
+initial  = zero
+
+&IF wavename jonswap
+T0		= 0
+Tend	 	= 120
+dt 		= 0.02
+Tp 		= 1.304
+Hs		= 0.013
+gamma 	 	= 1.3
+
+&SPATIAL
+Xstart		= -20
+Xend		= 50
+Xinflux		= 5.7
+dx		= 0.03419638495359062
+Damp 		= 20 20
+bathymetry	= user_defined
+#depth 		= 0.6		
+adjcoef		= 0.3
+
+&EVOL_MODEL
+dynamics	= HS2
+breaking	= no
+friction 	= no		
+influxing 	= Area
+propagation 	= Uni+
+kinematic 	= no
+ngauge 		= 6
+npartition 	= 1
+
+&IF BREAKING
+initiation 	= 0.8
+termination = 0.2 0.5
+
+&IF KINEMATIC
+xstart		= 40
+xend		= 60
+nsurf 		= 50
+ndeep 		= 40
+
+&MORE OPTIONS FOR EXPERT ONLY
+cutfrac		  = 4
+mid_depth_ref = default
+min_zsurf	  = default
+max_zsurf 	  = default
+ramp_influx 	= yes 8
+wall 		= no
+walltype 	= 1 30 1
+
+&INPUT COUPLING MODULE
+coupling 	= no ../foc/output
+overlay 	= 30 40
