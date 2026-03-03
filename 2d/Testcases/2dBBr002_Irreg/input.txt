@@ -1,0 +1,61 @@
+&INFLUX_SIGNAL
+Influx_signal   = user_defined
+ramp 		= 2.0 0.05
+Initial_profile = zero
+
+&IF wavename jonswap
+T0	= 0
+Tend	= 300
+dt 	= 0.5
+Tp 	= 12
+Hs	= 2
+gamma 	= 1
+s	= inf
+current   = 0.0 0.0
+direction = 0.0
+orientation = horizontal Uni-
+
+&SPATIAL
+Xstart		= -800 0
+Xend		= 800 800
+Line_influx 	= -700 650 700 650
+dx		= 5.351 3.213
+Damp 		= 100 100 100 50
+bathymetry 	= user_defined
+depth 		= 40
+Dmin 		= 0.1		
+adjcoef		= 2
+
+&EVOL_MODEL
+dynamics	= HS3
+breaking	= yes
+bottomfriction  = no		
+kinematic 	= no
+ngauge 		= 0
+npartition 	= 1
+
+&IF BREAKING
+initiation 	= 0.7
+termination 	= 0.2 0.5
+
+&IF KINEMATIC
+xstart	= 400 0
+xend	= 600 400
+nsurf 	= 20
+ndeep 	= 10
+
+&MORE OPTIONS FOR EXPERT ONLY
+cutfrac		= default
+depth_ref 	= 2 default
+min_zsurf      	= default
+max_zsurf     	= default
+wall 		= no
+walltype 	= 0 1 energy
+
+&COUPLING MODULE/ OZ setting
+coupling 	= no
+OZ_start 	= 406 -161
+OZ_end	 	= 577.5 154
+length_OZin 	= 35 35
+length_OZtr 	= 28 28
+dir_force 	= ../CFDu/harmw/
